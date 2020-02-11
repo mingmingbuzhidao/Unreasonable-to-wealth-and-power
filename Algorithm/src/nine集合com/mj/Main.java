@@ -38,21 +38,28 @@ public class Main {
 	}
 	
 	
-	static void testSet(Set<String> set, String[] words) {
+	static void testSetadd(Set<String> set, String[] words) {
 		for (int i = 0; i < words.length; i++) {
 			set.add(words[i]);
 		}
+	}
+	
+	static void testSetcontains(Set<String> set, String[] words) {
 		for (int i = 0; i < words.length; i++) {
 			set.contains(words[i]);
 		}
+	}
+	
+	static void testSetremove(Set<String> set, String[] words) {
 		for (int i = 0; i < words.length; i++) {
 			set.remove(words[i]);
 		}
 	}
 	
 	static void test2() {
-		FileInfo fileInfo = Files.read("C:\\Users\\MJ Lee\\Desktop\\src\\java\\util", 
+		FileInfo fileInfo = Files.read("/opt/environment/java/jdk1.8.0_241/src/java/util", 
 				new String[]{"java"});
+//		/concurrent
 		
 		System.out.println("文件数量：" + fileInfo.getFiles());
 		System.out.println("代码行数：" + fileInfo.getLines());
@@ -64,10 +71,20 @@ public class Main {
 //				testSet(new ListSet<>(), words);
 //			}
 //		});
-		
-		Times.test("TreeSet", new Task() {
+		Set<String> listSet = new TreeSet<>();
+		Times.test("listSet", new Task() {
 			public void execute() {
-				testSet(new TreeSet<>(), words);
+				testSetadd(listSet, words);
+			}
+		});
+		Times.test("listSet", new Task() {
+			public void execute() {
+				testSetcontains(listSet, words);
+			}
+		});
+		Times.test("listSet", new Task() {
+			public void execute() {
+				testSetremove(listSet, words);
 			}
 		});
 	}

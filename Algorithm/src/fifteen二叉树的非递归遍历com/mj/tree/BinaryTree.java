@@ -6,6 +6,8 @@ import java.util.Stack;
 
 import fifteen二叉树的非递归遍历com.mj.printer.BinaryTreeInfo;
 
+
+
 @SuppressWarnings("unchecked")
 public class BinaryTree<E> implements BinaryTreeInfo {
 	protected int size;

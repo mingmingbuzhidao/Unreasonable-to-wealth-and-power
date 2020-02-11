@@ -26,7 +26,7 @@ public class Main {
 	}
 	
 	static void test2() {
-		FileInfo fileInfo = Files.read("F:\\CoderMJLee\\DSA_Course\\课堂代码\\09-集合\\src", 
+		FileInfo fileInfo = Files.read("/opt/environment/java/jdk1.8.0_241/src/java/util", 
 				new String[]{"java"});
 		
 		System.out.println("文件数量：" + fileInfo.getFiles());

@@ -1,6 +1,5 @@
 package eleven哈希表com.mj;
 
-import java.util.List;
 
 import eleven哈希表com.mj.Times.Task;
 import eleven哈希表com.mj.file.FileInfo;
@@ -40,7 +39,7 @@ public class Main {
 	}
 	
 	static void test1() {
-		String filepath = "C:\\Users\\MJ Lee\\Desktop\\src\\java\\util\\concurrent";
+		String filepath = "/opt/environment/java/jdk1.8.0_241/src/java/util";
 		FileInfo fileInfo = Files.read(filepath, null);
 		String[] words = fileInfo.words();
 
@@ -135,19 +134,11 @@ public class Main {
 	
 	public static void main(String[] args) { 
 //		test1();
-//		test2(new HashMap<>());
-//		test3(new HashMap<>());
-//		test4(new HashMap<>());
-//		test5(new HashMap<>());
-		
-		test1();
 		test2(new LinkedHashMap<>());
-		test3(new LinkedHashMap<>());
-		test4(new LinkedHashMap<>());
-		test5(new LinkedHashMap<>());
+//		test3(new LinkedHashMap<>());
+//		test4(new LinkedHashMap<>());
+//		test5(new LinkedHashMap<>());
 		
-		java.util.HashMap<String, String> map;
-		java.util.LinkedHashMap<String, String> map2;
 	}
 
 }

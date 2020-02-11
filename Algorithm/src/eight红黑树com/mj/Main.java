@@ -14,54 +14,75 @@ import eight红黑树com.mj.tree.BinaryTree.Visitor;
 
 @SuppressWarnings("unused")
 public class Main {
-
-	static void test1() {
-		Integer data[] = new Integer[] { 67, 52, 92, 96, 53, 95, 13, 63, 34, 82, 76, 54, 9, 68, 39 };
-
-		AVLTree<Integer> avl = new AVLTree<>();
-		for (int i = 0; i < data.length; i++) {
-			avl.add(data[i]);
-			// System.out.println("【" + data[i] + "】");
-			// BinaryTrees.println(avl);
-			// System.out.println("---------------------------------------");
-		}
-
-		// for (int i = 0; i < data.length; i++) {
-		// avl.remove(data[i]);
-		// System.out.println("【" + data[i] + "】");
-		// BinaryTrees.println(avl);
-		// System.out.println("---------------------------------------");
-		// }
-
-		BinaryTrees.println(avl);
+	static List<Integer> data ;
+	static {
+		data = new ArrayList<>();
+		data.add(11);
+		data.add(1);
+		data.add(30);
+		data.add(2);
+		data.add(12);
+		data.add(14);
+		data.add(4);
+		data.add(29);
+		data.add(5);
+		data.add(13);
+		data.add(6);
+		data.add(7);
+		data.add(20);
+		data.add(18);
+//		data.add(27);
+//		data.add(21);
+//		data.add(24);
+//		data.add(41);
+//		data.add(25);
+//		data.add(26);
+//		data.add(28);
+//		data.add(19);
+//		data.add(8);
+//		data.add(15);
+//		data.add(22);
+//		data.add(23);
+//		data.add(16);
+//		data.add(9);
+//		data.add(10);
+//		data.add(3);
+//		data.add(17);
 	}
 
-	static void test2() {
-		List<Integer> data = new ArrayList<>();
-		for (int i = 0; i < 100_0000; i++) {
-			data.add((int) (Math.random() * 100_0000));
-		}
-
+	static void test1() {
 		BST<Integer> bst = new BST<>();
 		for (int i = 0; i < data.size(); i++) {
 			bst.add(data.get(i));
+			System.out.println("【" + data.get(i) + "】");
+			BinaryTrees.println(bst);
+			System.out.println("---------------------------------------");
 		}
-		for (int i = 0; i < data.size(); i++) {
-			bst.contains(data.get(i));
-		}
+		System.out.println("Remove");
 		for (int i = 0; i < data.size(); i++) {
 			bst.remove(data.get(i));
+			System.out.println("【" + data.get(i) + "】");
+			BinaryTrees.println(bst);
+			System.out.println("---------------------------------------");
 		}
+
+	}
+	
+	static void test2() {
 
 		AVLTree<Integer> avl = new AVLTree<>();
 		for (int i = 0; i < data.size(); i++) {
 			avl.add(data.get(i));
+			System.out.println("【" + data.get(i) + "】");
+			BinaryTrees.println(avl);
+			System.out.println("---------------------------------------");
 		}
+		System.out.println("Remove");
 		for (int i = 0; i < data.size(); i++) {
-			avl.contains(data.get(i));
-		}
-		for (int i = 0; i < data.size(); i++) {
+			System.out.println("【" + data.get(i) + "】");
 			avl.remove(data.get(i));
+			BinaryTrees.println(avl);
+			System.out.println("---------------------------------------");
 		}
 	}
 
@@ -96,6 +117,6 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		test3();
+		test2();
 	}
 }

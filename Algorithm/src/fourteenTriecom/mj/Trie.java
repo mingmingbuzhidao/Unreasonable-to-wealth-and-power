@@ -41,7 +41,7 @@ public class Trie<V> {
 		int len = key.length();
 		for (int i = 0; i < len; i++) {
 			char c = key.charAt(i); 
-			boolean emptyChildren = node.children == null;
+			boolean emptyChildren = node.children == null;//判断是否有孩子
 			Node<V> childNode = emptyChildren ? null : node.children.get(c);
 			if (childNode == null) {
 				childNode = new Node<>(node);
